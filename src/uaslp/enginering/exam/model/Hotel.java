@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class Hotel {
     String name;
+    int Poolsize;
+    int GymSize;
     private final ArrayList<Reservation> reservations;
     private final ArrayList<Room> rooms;
 
@@ -41,6 +43,21 @@ public class Hotel {
         return(rooms);
     }
 
+    public void setPoolsize(int poolsize) {
+        Poolsize = poolsize;
+    }
+
+    public int getPoolsize() {
+        return Poolsize;
+    }
+
+    public void setGymSize(int gymSize) {
+        GymSize = gymSize;
+    }
+
+    public int getGymSize() {
+        return GymSize;
+    }
 
 
     public ArrayList<Reservation> getReservations() {

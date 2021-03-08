@@ -50,6 +50,8 @@ public class Main {
         hotel.addRoom(new Room(203, "2-BED-QUEEN", RoomStatus.CLEAN));
         hotel.addRoom(new Room(204, "2-BED-QUEEN", RoomStatus.CLEAN));
         hotel.addRoom(new Room(205, "2-BED-QUEEN", RoomStatus.DIRTY));
+        hotel.setPoolsize(2);
+        hotel.setGymSize(1);
 
         return hotel;
     }
@@ -62,7 +64,8 @@ public class Main {
         ArrayList<Room> rooms = hotel.getRooms();
 
         System.out.println("Total rooms: " + rooms.size());
-        System.out.println();
+        System.out.println("Total pools: " + hotel.getPoolsize() );
+        System.out.println("total gyms: " + hotel.getGymSize());
         System.out.println("Room statuses");
         for (Room room : rooms) {
             System.out.println(room.getNumber() + " - " + room.getStatus());
